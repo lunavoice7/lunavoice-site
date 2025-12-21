@@ -683,6 +683,12 @@ details[open] .chev{ transform: rotate(180deg); }
   border-color: rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.04);
 }
+.footer-legal{
+  font-size: 11px;
+  opacity: .7;
+  margin-top: 8px;
+  line-height: 1.3;
+}
 
 /* Responsive */
 @media (max-width: 980px){
@@ -701,3 +707,19 @@ details[open] .chev{ transform: rotate(180deg); }
   .hero-metrics{ grid-template-columns: 1fr; }
   .grid-3{ grid-template-columns: 1fr; }
 }
+
+/* Prezzi: riga centrata per Pro + Premium */
+.plans-row{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 340px));
+  gap: 18px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* Prezzi: card enterprise sotto, centrata */
+.plan-enterprise{
+  max-width: 720px;
+  margin: 18px auto 0;
+}
+
