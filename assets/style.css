@@ -722,4 +722,40 @@ details[open] .chev{ transform: rotate(180deg); }
   max-width: 720px;
   margin: 18px auto 0;
 }
+/* ===== PATCH PREZZI (layout stabile) ===== */
+
+/* La griglia dei piani deve essere fluida, non a 5 colonne fisse */
+.plans{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+/* La riga Pro + Premium deve stare centrata e non attaccata a sinistra */
+.plans-row{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 340px));
+  gap: 18px;
+  justify-content: center;
+  margin-top: 18px;
+  width: 100%;
+}
+
+/* Su schermi piccoli: Pro e Premium uno sotto l'altro */
+@media (max-width: 720px){
+  .plans-row{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Enterprise sotto, centrata e più larga */
+.plan-enterprise{
+  max-width: 720px;
+  margin: 18px auto 0;
+}
+
+/* Evita card "larghissime" per contenuti lunghi */
+.plan{
+  max-width: 100%;
+}
 
